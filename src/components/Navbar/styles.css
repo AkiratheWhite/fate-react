@@ -1,0 +1,79 @@
+/*Sets the size and color for the navbar.*/
+.navbar {
+    width: 100%;
+    min-height: 60px;
+    background-image: linear-gradient(to right, #000051 15%, #4D99C6 50%, #000051 85%);
+    
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*Sets the size for the area that displays the logo and heading.*/
+#banner {
+    display: flex;
+    padding: 0;
+
+    height: 55px;
+}
+
+/*Specifies logo size and source.*/
+#logo {
+    width: 86px;
+    height: 50px;
+
+    background-image: url("../../img/logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/*Specifies the heading size and source for the navbar.*/
+#logo_header {
+    height: 100%;
+    width: 100%;
+
+    max-width: 903px;
+
+    background-image: url("../../img/logo_header.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#links {
+    padding: 0;
+    font-size: 20px;
+}
+
+/*Specifies the unordered list used for menu navigation links.*/
+#links ul {
+    padding: 0;
+
+    list-style-type: none; 
+    width: 100%;
+    margin: 0;
+
+    justify-content: center;
+}
+
+#links ul a {
+    text-decoration: none;
+}
+
+/*Customizes the font and bullets for all list items.*/
+#links li {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px #000000;
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    background: url("../../img//bullet.png") left 50% no-repeat;
+
+    transition: filter 0.25s;
+}
+
+/*Changes the color of links on hover so that users can see what they have selected.*/
+#links li:hover {
+    filter: invert(40%);
+}

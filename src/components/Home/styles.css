@@ -1,0 +1,353 @@
+/*** HOMEPAGE START ***/
+    body {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+	.chaldea {
+		background-image: url("../../img/chaldea.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+	
+		padding: 20px 0 0 0;
+		margin: 0;
+	
+		min-height: calc(100vh - 650px - 71px);
+		width: 100%;
+	}
+	
+	.jumbotron {
+		width: 100%;
+	}
+
+	/*Container used for the visitor greeting. Includes CSS animations and z-index.*/	
+	#greeting {
+		display: none;
+		opacity: 0;
+
+		position: absolute;
+		z-index: 100;
+		width: 100%;
+		height: 100vh;
+
+		background-color: rgba(0, 0, 0, 0.75);
+		transition: opacity 0.5s ease-out;
+	}
+
+	#greeting img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	@font-face {
+		font-family: 'columbia-serial-medium-regular';
+		src: url('./columbia-serial-medium-regular.ttf');
+	}
+
+	/*Specifies the textbox used to deliver greeting messages.*/
+	#greeting .dialogue {
+		position: absolute;
+		bottom: 10%;
+		right: 2.5%;
+
+		height: 156px;
+		width: 95%;
+		max-width: 1024px;
+
+		background-image: url("../../img/textbox.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		font-family: 'columbia-serial-medium-regular', sans-serif;
+		font-size: 30px;
+		color: #E1EAF3;
+
+		padding: 20px 40px;
+	}
+
+	#homepage-main {
+		padding: 0;
+	}
+
+	#disclaimer {
+		font-size: 1.5rem;
+		color: white;
+		text-shadow: 2px 2px 1px #000000;
+	}
+
+	#homepage-main h1 {
+		text-align: right;
+		color: white;
+		text-shadow: 2px 2px 10px #0030FF, 2px 2px 10px #0030FF, 2px 2px 10px #0030FF, 2px 2px 10px #0030FF;
+	}
+
+	#homepage-main .jumbotron {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
+		background-color: transparent;
+	}
+
+	#homepage-main .jumbotron ul {
+		list-style-type: none;
+
+		height: 100%;
+		min-height: 650px;
+		width: 100%;
+
+		padding: 0;
+		justify-content: center;
+	}
+
+	/*Styling and animation used for the large displays on the main page.*/
+	#homepage-main .jumbotron li {
+		position: relative;
+
+		width: 12.5%;
+		filter: brightness(0.7);
+
+		transition: width 0.125s 0s ease-out, brightness 0s 0s ease-out;
+
+		overflow: hidden;
+	}
+
+	/*The large displays on the homepage will change when hovered. This specifies the transformed state.*/
+	#homepage-main .jumbotron li:hover, #homepage-main .jumbotron li:active {
+		width: calc(100% * (1/2.75));
+		filter: brightness(1.0);
+	}
+
+	#series {
+		margin: 0;
+	}
+
+	/*For Saga of Emiya-san*/
+	#series li:nth-child(1) {
+		background-image: linear-gradient(to bottom, #FF3838, #FF8D8D 20%, #FF8D8D 80%, #FF3838);
+	}
+
+	/*For Shroud of Malevolence*/
+	#series li:nth-child(2) {
+		background-image: linear-gradient(to bottom, #8A00FF, #B65FFF 20%, #B65FFF 80%, #8A00FF);
+	}
+
+	/*For Eternal Wish */
+	#series li:nth-child(3) {
+		background-image: linear-gradient(to bottom, #00F6FF, #84FBFF 20%, #84FBFF 80%, #00F6FF);
+	}
+
+	/*For Challenge Quests */
+	#series li:nth-child(4) {
+		background-image: linear-gradient(to bottom, #FFAA00, #FFF479 20%, #FFF479 80%, #FFAA00);
+	}
+
+	/*For title of each series*/
+	.vertical-font {
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		z-index: 1;
+
+		font-size: 3rem;
+		color: #FFFFFF;
+		opacity: 0.85;
+		text-shadow: 2px 2px 2px #000000;
+
+		padding-top: 20px;
+
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+	}
+
+	/*For each portrait image displayed in the individual series nodes.*/
+	.img {
+		position: absolute;
+
+		display: flex;
+		justify-content: center;
+
+		max-width: 100%;
+		height: 100%;
+	}
+
+	/*Attempt to fix image stretching on mobile devices.*/
+	.img img {
+		object-fit: contain!important;
+	}
+
+	/*For the currently hovered series node. Includes animation.*/
+	.active img {
+		animation-name: showServant;
+		animation-duration: 0.75s;
+	}
+
+	#series .not-active-first img{
+		animation-name: none;
+	}
+
+	/*For currently unselected series nodes.*/
+	.not-active img {
+		filter: grayscale(100%);
+		opacity: 0.7;
+		transform: scale(1.5);
+
+		animation-name: hideServant;
+		animation-duration: 0.75s;
+	}
+
+	/*Keyframes animation for moving a mouse onto a series node.*/
+	@keyframes showServant {
+		0% {
+			transform: scale(1.5) translateX(0);
+			filter: grayscale(0);
+			opacity: 1.0;
+		}
+
+		50% {
+			transform: scale(1.5) translateX(110%);
+		}
+
+		50% {
+			transform: scale(1.0) translateX(110%);
+		}
+
+		100% {
+			transform: scale(1.0) translateX(0);
+		}
+	}
+
+	/*Keyframes animation for moving mouse off of a series node.*/
+	@keyframes hideServant {
+		0% {
+			transform: scale(1.5)  translateX(110%);
+			opacity: 0;
+		}
+
+		100% {
+			transform: scale(1.5) translateX(0); 
+			filter: grayscale(100%); 
+			opacity: 0.7;
+		}
+	}
+
+	/*Styling for the description added to each series. Hidden until toggled by JavaScript.*/
+	.series-desc{
+		visibility: hidden;
+		opacity: 0;
+		width: 0;
+		
+		position: absolute;
+		top: 0;
+
+
+		padding: 20px 10% 20px 30%;
+		font-size: 1.5rem;
+		color: #FFFFFF;
+		text-shadow: 2px 2px 2px #000000;
+
+		background-color: rgba(0, 0, 0, 0.1);
+
+		transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+	}
+
+	/*Visible state of series descriptions.*/
+	.visible-desc {
+		visibility: visible;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+	}
+/*** HOMEPAGE END ***/
+
+/*** HOMEPAGE RESPONSIVE DESIGN DECLARATIONS ***/
+@media (max-width: 575px) {
+	.chaldea {
+		min-height: 250px;
+	}
+
+	#disclaimer {
+		font-size: 1rem;
+	}
+
+	.vertical-font {
+		font-size: 1.5rem;
+	}
+
+	.vertical-font {
+
+		line-height: 1.25rem;
+		padding-left: 7px;
+	}
+
+	.series-desc{
+		padding: 20px 5% 20px 15%;
+		font-size: 1rem;
+
+		transition: none;
+	}
+
+	#homepage-main .jumbotron ul {
+		height: 200vh;
+	}
+
+
+	#homepage-main .jumbotron li {
+		filter: brightness(1.0);
+		height: 25%;
+		width: 100%;
+	}
+
+	img {
+		transition: filter 0.5s ease-out, opacity 0.5s ease-out, transform 0.25s ease-out;
+	}
+
+	#homepage-main .jumbotron li:hover, #homepage-main .jumbotron li:active {
+		width: 100%;
+	}
+
+	.active img {
+		animation-name: none;
+	}
+
+	.not-active img {
+		animation-name: none;
+	}
+}
+
+@media (max-width: 991px) and (min-width: 576px) {
+	.vertical-font, .title {
+		font-size: 2rem;
+	}
+
+	.series-desc{
+		font-size: 1rem;
+	}
+
+	#homepage-main .jumbotron li {
+		width: 15%;
+	}
+
+	#disclaimer {
+		font-size: 1.15rem;
+	}
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	#homepage-main .jumbotron li {
+		width: 20%;
+	}
+
+	.series-desc{
+		font-size: 1.25rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	#homepage-main .jumbotron li {
+		width: max(12.5%, 233px);
+	}
+}
