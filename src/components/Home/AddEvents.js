@@ -6,6 +6,7 @@ import $ from 'jquery';
 
 const AddEvents = () => { 
     useEffect(() => {
+
         //Event listeners added for mousein and mouseout using JQuery.
         $("#series li").hover(showDesc, hideDesc);
         $("#series li").on({'touchstart':showDesc});
@@ -24,7 +25,7 @@ const AddEvents = () => {
                     $("#"+parent+" .series-desc").toggleClass("visible-desc");
                     $("#"+parent+" .img").toggleClass("not-active");
 
-                    if ($("#"+parent+" .img").hasClass("not-active-first") == true) {
+                    if ($("#"+parent+" .img").hasClass("not-active-first") === true) {
                         $("#"+parent+" .img").removeClass("not-active-first");
                     }
                 }, 100);

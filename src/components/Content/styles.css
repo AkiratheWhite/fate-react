@@ -1,0 +1,50 @@
+#videos {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    min-height: calc(100vh - 60px - 70px);
+
+    background-image: url("../../img/study.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-body {
+    font-family: 'Alber Medium', sans-serif;
+    text-align: center;
+    
+    white-space: pre-line;
+    font-size: 1.25rem;
+
+    color: rgba(102, 98, 80, 1.0);
+    text-shadow: 2px 2px 2px #FFFFFF;
+
+    background-image: url("../../img/item.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    cursor: pointer;
+}
+
+.return {
+    color: #007FFF!important;
+}
+
+/*** VIDEO RESPONSIVE DESIGN DECLARATIONS ***/
+@media (max-width: 576px) {
+    .card-body {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1199px){
+    .card-body {
+        font-size: 1.25rem;
+    }
+}

@@ -41,11 +41,6 @@
 		right: 0;
 	}
 
-	@font-face {
-		font-family: 'columbia-serial-medium-regular';
-		src: url('./columbia-serial-medium-regular.ttf');
-	}
-
 	/*Specifies the textbox used to deliver greeting messages.*/
 	#greeting .dialogue {
 		position: absolute;

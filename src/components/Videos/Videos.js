@@ -1,0 +1,39 @@
+import fetchContent from './FetchContent';
+import {useLocation, Link} from 'react-router-dom';
+
+const Videos = () => {
+    var series = ""; //Used as the search criteria for fetchContent
+
+    const location = useLocation(); //Uses location object from react-router
+    var path = window.location.pathname; //In case the user is directly visiting a page, use the url path to search.
+
+    if (typeof location.state === 'undefined') {
+        series = path.substring((path.lastIndexOf("/")+1), path.length);
+    } else {
+        series = location.state.series;
+    }
+
+    const content = fetchContent(series); //Searches the database for videos that have the same 'series' value as the input.
+
+    return (
+        <>
+            <div className="row row-cols-2 g-4">
+                {content.map((item) => (
+                    <div className="col" key={item._id}>
+                        <div className="card h-100">
+                            <div className="card-body">{item.title}</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <Link to="/videos">
+                    <div className="card">
+                        <div className="card-body return">Return to Main Menu</div>
+                    </div>
+            </Link>
+        </>
+    );
+}
+ 
+export default Videos;

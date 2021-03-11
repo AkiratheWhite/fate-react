@@ -28,7 +28,7 @@ const Home = () => {
 					<li id="emiya">
 						<a href="/videos/emiya">
 							<span className="vertical-font">The Saga of Emiya-san</span>
-							<div className="img not-active not-active-first"><img src={emiya}/></div>
+							<div className="img not-active not-active-first"><img src={emiya} alt="Emiya-san Series"/></div>
 							<div className="series-desc">
 								<p>Even at a time where Chaldea should be peaceful, not all is as it seems.</p>
 								<p>When a group of Servants get together to celebrate Master's birthday, something is off about Heroic Spirit Emiya. They soon discover a shocking secret, one that may strain even the strongest of bonds.</p>
@@ -41,7 +41,7 @@ const Home = () => {
 				<li id="shroud">
 					<a href="/videos/shroud">
 						<span className="vertical-font">Shroud of Malevolence</span>
-						<div className="img not-active not-active-first"><img src={mhxa}/></div>
+						<div className="img not-active not-active-first"><img src={mhxa} alt="Shroud of Malevolence"/></div>
 						<div className="series-desc">
 							<p>Peace and quiet leads to complacency, and complacency inevitably leads to danger.</p>
 							<p>Chaldea is suddenly attacked by an army of unidentified soldiers. Master, along with nearly all of Chaldea’s Servants, are kidnapped.</p>
@@ -52,7 +52,7 @@ const Home = () => {
 
 				<li id="wish">
 					<span className="vertical-font">Coming Soon...</span>
-					<div className="img not-active not-active-first"><img src={entity}/></div>
+					<div className="img not-active not-active-first"><img src={entity} alt="???"/></div>
 					<div className="series-desc">
 						<p>Y' ephaimgsyha'h ymg' epgoka. Y' ymg' ephaiah'hri ph' nilgh'ri syha'h.</p>
 					</div>
@@ -61,7 +61,7 @@ const Home = () => {
 				<li id="challenge">
 					<a href="/videos/challenge">
 						<span className="vertical-font">Challenge Quests</span>
-						<div className="img not-active not-active-first"><img src={waver}/></div>
+						<div className="img not-active not-active-first"><img src={waver} alt="Challenge Quests"/></div>
 						<div className="series-desc">
 							<p>With every season, new festivals. With every festival, new challenges.</p>
 							<p>Watch as Chaldea’s Servants take on Challenge Quests!</p>

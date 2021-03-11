@@ -1,11 +1,53 @@
 body {
-
-
 	background-image: url("./img/bg_ptn.gif");
 	background-repeat: repeat;
-
 }
+
+body a {
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+main {
+  padding: 2rem;
+}
+
+/***FONT INCLUDES ***/
+@font-face {
+  font-family: '';
+  src: url('./fonts/Alber Medium.otf');
+}
+
+@font-face {
+  font-family: 'columbia-serial-medium-regular';
+  src: url('./fonts/columbia-serial-medium-regular.ttf');
+}
+/*** END OF FONT INCLUDES ***/
+
+/*** STYLING FOR SHOWING CHARCTERS ***/
+.character {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.character.portrait {
+  max-width: 672px;
+  max-height: 675px;
+}
+
+.character.right {
+  left: initial;
+  right: 0;
+}
+
+.character img {
+  height: 100%;
+  width: 100%;
+}
+
+/*** END OF CHARACTER STYLING ***/
