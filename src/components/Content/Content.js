@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-// import Series from '../Series/Series';
-
 import waver from '../../img/waver_grin.png';
 import './styles.css';
 
@@ -13,7 +10,7 @@ const Content = (props) => {
     return (
         <main id="videos" className="container-fluid">
         <div className="character portrait d-none d-md-block">
-            <img src={waver}/>	
+            <img src={waver} alt="Waver"/>	
         </div>
         {props.children}{/*Required to allow other components to pass children to them.*/}
         </main>

@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Content from './components/Content/Content';
 import Series from './components/Series/Series';
 import Videos from './components/Videos/Videos';
+import Player from './components/Player/Player';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           </Route>
           <Route exact path="/videos/:series">
             <Content>
+              <Player/>
               <Videos/>
             </Content>
           </Route>

@@ -11,9 +11,23 @@ export const videoSlice = createSlice(
     {
         name: 'videos',
         initialState: {
-            content: []
+            content: [], //Array to hold objects with information for videos.
+            url: null //Used to hold the url of the currently selected video.
         },
-        reducers: {},
+        reducers: {
+            reset: state => {//Action to reset state.
+                state.content = []; //Clears the array.
+            },
+            nullLink: state => {
+                /*This action is used to send a null value to the url.
+                The aim is to be able to clear the state so that the user does 
+                not see the previous video they clicked on when clicking a new video.*/
+                state.url = null;
+            },
+            addLink: (state, action) => {
+                state.url = action.payload; //Changes the iframe url to the video selected by the user.
+            }
+        },
         extraReducers: {
             [fetchSeries.fulfilled]: (state, action) => {
                 state.content = []; //Clears the array before adding new data.
@@ -25,4 +39,5 @@ export const videoSlice = createSlice(
     }
 );
 
+export const {reset, addLink, nullLink} = videoSlice.actions;
 export default videoSlice.reducer;

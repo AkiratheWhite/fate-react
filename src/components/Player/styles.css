@@ -1,0 +1,57 @@
+.player {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: flex-end;
+
+    opacity: 0;
+    z-index: -1;
+}
+
+.close-btn {
+}
+
+.hidden {
+    animation: zIndexChangeReverse 0.5s 0s forwards;
+}
+
+.visible {
+    animation: zIndexChange 0.5s 0s forwards;
+}
+
+@keyframes zIndexChange {
+    0% {
+      opacity: 0;
+      z-index: -1;
+    }
+    
+    1% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 1.0;
+        z-index: 1;
+    }
+  }
+
+  @keyframes zIndexChangeReverse {
+    0% {
+      opacity: 1;
+      z-index: 1;
+    }
+    99% {
+      opacity: 0;
+      z-index: 1;
+    }
+    100% {
+      z-index: -1;
+    }
+  }

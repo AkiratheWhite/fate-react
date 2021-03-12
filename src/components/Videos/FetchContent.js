@@ -1,7 +1,7 @@
 import {fetchSeries} from '../../redux/videos';
 
 import {useSelector, useDispatch} from 'react-redux';
-import { useEffect} from 'react';
+import {useEffect} from 'react';
 
 const FetchContent = (title) => {
         //Gets the 'content' state from the redux 'videos' store.
