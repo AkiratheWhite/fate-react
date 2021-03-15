@@ -12,10 +12,10 @@ const Navbar = () => {
 
             <div id="links" className="col-12 col-lg-3 col-xl-5">
                 <ul className="row">
-                        <a href="/about" className="col-6"><li>About</li></a>
+                        <Link to="/about" className="col-6"><li>About</li></Link>
                         <Link to="/videos" className="col-6"><li>Videos</li></Link>
-                        <a href="/contact" className="col-6"><li>Requests & Contact</li></a>
-                        <a href="https://fate-go.us/" target="_blank" className="col-6"><li>Official F/GO Website</li></a>
+                        <Link to="/contact" className="col-6"><li>Requests & Contact</li></Link>
+                        <Link to="https://fate-go.us/" target="_blank" className="col-6"><li>Official F/GO Website</li></Link>
                 </ul>			
             </div>
         </div>

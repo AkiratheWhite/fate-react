@@ -10,3 +10,10 @@ export const getNames = () => {
     return axios.get(`${url}names`);
 }
 
+export const getLatest = (series) => {
+    return axios.get(`${url}${series}/latest`);
+}
+
+export const postVideo = (addVideo) => {
+    return axios.post(`${url}addVideo`, addVideo);
+}

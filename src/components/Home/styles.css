@@ -12,8 +12,9 @@
 	
 		padding: 20px 0 0 0;
 		margin: 0;
-	
-		min-height: calc(100vh - 650px - 71px);
+		
+		/*The navbar has min-height 71px, the footer has min-height 70px, the jumbotron has min-height 650px.*/
+		min-height: calc(100vh - 650px - 71px - 70px);
 		width: 100%;
 	}
 	

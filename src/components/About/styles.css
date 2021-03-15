@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*** ABOUT PAGE START ***/
+#about {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: right;
+    
+    min-height: calc(100vh - 71px - 70px);
+
+    background-image: url("../../img/hall.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#about-container {
+    z-index: 1;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 576px) {
+    #about-container p {
+        font-size: 1.25rem;
+    }
+}
+
+/*** ABOUT PAGE END ***/

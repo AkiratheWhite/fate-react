@@ -23,8 +23,8 @@ const Player = () => {
 
     return (
         <>     
-        <div className="player">   
-            <button className="btn btn-danger close-btn">X</button>
+        <div className="player container-fluid">   
+            <button className="btn btn-primary close-btn"></button>
                 {   
                     isLoading && 
                     <div className="spinner-border text-info" role="status">
@@ -33,7 +33,7 @@ const Player = () => {
                 }
             {
             !isLoading && 
-            <div className="player-container ratio ratio-16x9">
+            <div className="container ratio ratio-16x9">
                 <iframe src={url}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                 </iframe>

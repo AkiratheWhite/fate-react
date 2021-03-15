@@ -1,0 +1,13 @@
+/*** FOOTER START ***/
+footer {
+    width: 100%;
+    min-height: 70px;
+
+    padding: 10px;
+    
+    background-color: #000000;
+    color: #FFFFFF;
+
+    text-align: center;
+}
+/*** FOOTER END ***/

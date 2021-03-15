@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: space-evenly;
 
-    min-height: calc(100vh - 60px - 70px);
+    /*The navbar has min-height 71px, the footer has min-height 70px.*/
+    min-height: calc(100vh - 71px - 70px);
 
     background-image: url("../../img/study.png");
     background-size: cover;
