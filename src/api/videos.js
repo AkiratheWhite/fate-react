@@ -1,6 +1,8 @@
 import axios from 'axios'; //Used for routing.
 
-const url = 'http://localhost:5000/videos/';
+//const url = 'http://localhost:5000/videos/';
+
+const url = 'https://fate-visions-node.herokuapp.com/videos/';
 
 export const getVideos = (series) => {
     return axios.get(`${url}${series}`);
