@@ -1,6 +1,5 @@
 //This file is used to add JQuery event listeners to the homepage component.
 //A useEffect hook is used here, with an empty array argument so that it only runs once on component render.
-
 import {useEffect} from 'react';
 import $ from 'jquery';
 
@@ -43,24 +42,11 @@ function showGreeting () {
 	}
 }
 
-//Hides the page greeting on click. 
-function hideGreeting () {
-	if ($(window).width() > 992) {
-
-        $("#greeting").css("opacity", "0.0");
-    
-        setTimeout(function(){
-            $("#greeting").css("display","none");
-        }, 500);
-	}
-}
-
 const AddEvents = () => { 
     useEffect(() => {
 
         $(document).ready(showGreeting);
 
-        $("#greeting").click(hideGreeting);
         $("#series li").hover(showDesc, hideDesc);
         $("#series li").on({'touchstart':showDesc});
         $("#series li").on({'touchcancel':hideDesc});

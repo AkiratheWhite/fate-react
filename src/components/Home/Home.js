@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-
+import {useSelector} from 'react-redux';
 import './styles.css';
 
 import emiya from '../../img/emiya.png';
@@ -11,9 +11,21 @@ import AddEvents from './AddEvents'
 import Greeting from './Greeting';
 
 const Home = () => {
+	
+	/*Using a redux state to test if a user has seen the greeting before.
+	If they have, don't show the greeting again until the page is completely refreshed.*/
+	const greetingViewed = useSelector(state => {
+		return state.greetings.greetingViewed;
+	});
+
     return (
         <>
-		<Greeting/>
+		{
+			//Only show the greeting if the user hasn't seen it already.
+			greetingViewed === false &&
+			<Greeting/>
+		}
+
         <main id="homepage-main" className="container-fluid">
 		
         <div className ="chaldea row pb-3">
