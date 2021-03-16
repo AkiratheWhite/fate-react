@@ -5,7 +5,7 @@ const About = () => {
     return (
         <main id="about" className="container-fluid">
 		<div className="character d-none d-md-block">
-			<img src={jeanne}/>	
+			<img src={jeanne} alt="Jeanne Smiling"/>	
 		</div>
 
 		<div id="about-container" className="col-12 col-md-6">

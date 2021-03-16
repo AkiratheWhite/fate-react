@@ -25,6 +25,9 @@ main {
 @font-face {
   font-family: 'columbia-serial-medium-regular';
   src: url('./fonts/columbia-serial-medium-regular.ttf');
+  font-weight: 400;
+  font-stretch: 100;
+  font-style: normal;
 }
 /*** END OF FONT INCLUDES ***/
 

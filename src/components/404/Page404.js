@@ -5,7 +5,7 @@ const Page404 = () => {
     return (
     <main id="error404" className="container-fluid">
     <div className="character d-none d-md-block">
-        <img src={bb}/>	
+        <img src={bb} alt="BB Exasperated"/>	
     </div>
 
         <div id="message404" className="col-6">

@@ -35,7 +35,7 @@ const Player = () => {
             !isLoading && 
             <div className="container ratio ratio-16x9">
                 <iframe src={url}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="Video Player">
                 </iframe>
             </div>
             }

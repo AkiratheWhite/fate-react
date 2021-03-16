@@ -39,7 +39,6 @@ const getGreeting = () => {
     return randGreeting;
 }
 
-
 const Greeting = () => {
 
 	const dispatch = useDispatch();
@@ -61,8 +60,8 @@ const Greeting = () => {
 
     return (
         <div id="greeting" onClick={hideGreeting}>
-        <   img src={selectedGreeting.img}/>
-        <div class="dialogue">{selectedGreeting.greeting}</div>
+        <   img src={selectedGreeting.img} alt="Mash Greeting"/>
+        <div className="dialogue">{selectedGreeting.greeting}</div>
         </div>
     );
 }

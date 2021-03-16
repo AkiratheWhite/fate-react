@@ -25,7 +25,7 @@ const Contact = () => {
         {submitted === false && 
         <>
         <div className="character portrait right d-none d-md-block">
-            <img src={mordred_base}/>	
+            <img src={mordred_base} alt="Mordred Tux"/>	
         </div>
     
         <form id="contact-form" className="col-12 col-md-6 p-4" onSubmit={submitForm}>
@@ -63,7 +63,7 @@ const Contact = () => {
     {submitted === true && 
         <>
             <div className="character portrait right d-none d-md-block">
-                <img src={mordred_smile}/>	
+                <img src={mordred_smile} alt="Mordred Tux Smiling"/>	
             </div>
             <div className="confirmation col-12 col-md-6 p-4 text-center">
                 <h3>Thank you for your message!</h3>
