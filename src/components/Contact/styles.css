@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+/*** CONTACT PAGE START ***/
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    min-height: calc(100vh - 71px - 70px);
+
+    background-image: url("../../img/reception.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-family: 'Contrail One', cursive;
+}
+
+#contact-form, .confirmation {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    font-family: 'Contrail One', cursive;
+    z-index: 1;
+}
+/*** CONTACT PAGE END ***/

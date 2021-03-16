@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import {postVideo, getLatest} from '../../api/videos';
-import $ from 'jquery';
 
 import fetchSeries from '../Series/FetchSeries';
 import './styles.css';
@@ -23,6 +22,7 @@ const CreateVideo = () => {
     /*After extensive testing, the decision was made so that the below code can only be executed after
     the application has retrieved data from MongoDB. This code will trigger null value TypeErrors otherwise.*/
     const getLatestEpisode = async () => {
+        try {//Put into a try catch statement so that it will not throw an error if getElementById returns a null.
             const selectInput = document.getElementById("series");
             
             var series = selectInput.value; //Gets the current value of the select element.
@@ -33,6 +33,10 @@ const CreateVideo = () => {
                     setLatest(latest => (episode +1));
                 }
             }
+        }
+        catch (err) {
+            console.log(err.messsage);
+        }
     }
 
     const submitVideoForm = (e) => {
@@ -50,11 +54,12 @@ const CreateVideo = () => {
     useEffect(()=> {
         var orderValue = parseInt(document.getElementById("order").value)
         setVideoData({...videoData, order: orderValue})
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [latest])
 
     return (
         <div id="submission">
-            {submitted == false && 
+            {submitted === false && 
             <form onSubmit={submitVideoForm} id="videoForm" className="col-12 col-md-6 py-4 px-2">
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Episode Title:</label>
@@ -87,8 +92,8 @@ const CreateVideo = () => {
             </form>}
             
             {
-                submitted == true &&
-                <div>
+                submitted === true &&
+                <div className="confirmation text-center col-12 col-md-6 py-4 px-2">
                     New video added!
                 </div>
             }

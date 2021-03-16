@@ -15,7 +15,7 @@ const Navbar = () => {
                         <Link to="/about" className="col-6"><li>About</li></Link>
                         <Link to="/videos" className="col-6"><li>Videos</li></Link>
                         <Link to="/contact" className="col-6"><li>Requests & Contact</li></Link>
-                        <Link to="https://fate-go.us/" target="_blank" className="col-6"><li>Official F/GO Website</li></Link>
+                        <a href="https://fate-go.us/" target="_blank" className="col-6"><li>Official F/GO Website</li></a>
                 </ul>			
             </div>
         </div>

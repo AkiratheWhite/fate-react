@@ -8,10 +8,12 @@ import entity from '../../img/entity.png';
 import waver from '../../img/waver.png';
 
 import AddEvents from './AddEvents'
+import Greeting from './Greeting';
 
 const Home = () => {
     return (
         <>
+		<Greeting/>
         <main id="homepage-main" className="container-fluid">
 		
         <div className ="chaldea row pb-3">

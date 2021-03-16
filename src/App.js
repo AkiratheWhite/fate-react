@@ -10,6 +10,7 @@ import Player from './components/Player/Player';
 import About from './components/About/About';
 import Page404 from './components/404/Page404';
 import CreateVideo from './components/CreateVideo/CreateVideo';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
               <Player/>
               <Videos/>
             </Content>
+          </Route>
+          <Route path="/contact">
+            <Contact/>
           </Route>
           <Route path="*">
             <Page404/>
