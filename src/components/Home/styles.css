@@ -111,8 +111,9 @@
 		overflow: hidden;
 	}
 
-	/*The large displays on the homepage will change when hovered. This specifies the transformed state.*/
-	#homepage-main .jumbotron li:hover, #homepage-main .jumbotron li:active {
+	/*The large displays on the homepage will change when hovered. (JQuery adds active class to li when hovered)
+	* This specifies the transformed state.*/
+	#homepage-main .jumbotron li.active {
 		width: calc(100% * (1/2.75));
 		filter: brightness(1.0);
 	}
@@ -235,7 +236,8 @@
 	.series-desc{
 		visibility: hidden;
 		opacity: 0;
-		width: 0;
+		width: 100%;
+		height: 100%;
 		
 		position: absolute;
 		top: 0;
@@ -255,8 +257,6 @@
 	.visible-desc {
 		visibility: visible;
 		opacity: 1;
-		width: 100%;
-		height: 100%;
 	}
 /*** HOMEPAGE END ***/
 
@@ -302,7 +302,7 @@
 		transition: filter 0.5s ease-out, opacity 0.5s ease-out, transform 0.25s ease-out;
 	}
 
-	#homepage-main .jumbotron li:hover, #homepage-main .jumbotron li:active {
+	#homepage-main .jumbotron li.active {
 		width: 100%;
 	}
 
