@@ -183,6 +183,10 @@
 		animation-duration: 0.75s;
 	}
 
+	#series li.not-active-first {
+		pointer-events: none;
+	}
+
 	#series .not-active-first img{
 		animation-name: none;
 	}

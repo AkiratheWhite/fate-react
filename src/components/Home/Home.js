@@ -41,7 +41,7 @@ const Home = () => {
 		<div className="jumbotron">
 			<ul id="series" className="row">
 				
-					<li id="emiya">
+					<li id="emiya" className="not-active-first">
 						<Link to="/videos/emiya">
 							<span className="vertical-font">The Saga of Emiya-san</span>
 							<div className="img not-active not-active-first"><img src={emiya} alt="Emiya-san Series"/></div>
@@ -54,7 +54,7 @@ const Home = () => {
 					</li>
 				
 
-				<li id="shroud">
+				<li id="shroud" className="not-active-first">
 					<Link to="/videos/shroud">
 						<span className="vertical-font">Shroud of Malevolence</span>
 						<div className="img not-active not-active-first"><img src={mhxa} alt="Shroud of Malevolence"/></div>
@@ -66,7 +66,7 @@ const Home = () => {
 					</Link>
 				</li>
 
-				<li id="wish">
+				<li id="wish" className="not-active-first">
 					<span className="vertical-font">Coming Soon...</span>
 					<div className="img not-active not-active-first"><img src={entity} alt="???"/></div>
 					<div className="series-desc">
@@ -74,7 +74,7 @@ const Home = () => {
 					</div>
 				</li>
 
-				<li id="challenge">
+				<li id="challenge" className="not-active-first">
 					<Link to="/videos/challenge">
 						<span className="vertical-font">Challenge Quests</span>
 						<div className="img not-active not-active-first"><img src={waver} alt="Challenge Quests"/></div>

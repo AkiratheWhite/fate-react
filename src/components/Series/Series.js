@@ -12,16 +12,26 @@ const Series = () => {
     stored in the state won't be visible for a split second. */
     ClearContent();
 
-    return ( 
+    return (
         <div className="row row-cols-2 g-4">
-            {series.map((item) => (
-                <Link key={item._id} to={{pathname :`/videos/${item.seriesID}`, state: {series: item.seriesID}}}><div className="col" >
-                    <div className="card h-100">
-                        <div className="card-body">{item.name}</div>
-                    </div>
+            {
+                series === [] && 
+                <div className="spinner-border text-info" role="status">
+                <   span className="visually-hidden">Loading...</span>
                 </div>
-                </Link>
-            ))}
+            }
+            {
+                series != [] &&
+                
+                series.map((item) => (
+                    <Link key={item._id} to={{pathname :`/videos/${item.seriesID}`, state: {series: item.seriesID}}}><div className="col" >
+                        <div className="card h-100">
+                            <div className="card-body">{item.name}</div>
+                        </div>
+                    </div>
+                    </Link>
+                ))
+            }
         </div>
      );
 }
