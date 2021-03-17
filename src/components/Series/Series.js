@@ -15,13 +15,13 @@ const Series = () => {
     return (
         <div className="row row-cols-2 g-4">
             {
-                series === [] && 
+                series.length < 1 && 
                 <div className="spinner-border text-info" role="status">
                 <   span className="visually-hidden">Loading...</span>
                 </div>
             }
             {
-                series != [] &&
+                series !== [] &&
                 
                 series.map((item) => (
                     <Link key={item._id} to={{pathname :`/videos/${item.seriesID}`, state: {series: item.seriesID}}}><div className="col" >
