@@ -2,8 +2,8 @@ import {postMessage} from '../../api/messages'; //Axios routing for posting form
 import {useState} from 'react'; //Used to check if the form has been submitted or not to prevent double submission.
 
 import './styles.css';
-import mordred_base from '../../img/mordred_tux.png';
-import mordred_smile from "../../img/mordred_tux_smile.png";
+import mordred_base from '../../img/mordred_tux.webp';
+import mordred_smile from "../../img/mordred_tux_smile.webp";
 
 const Contact = () => {
 

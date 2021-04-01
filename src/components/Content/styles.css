@@ -9,7 +9,7 @@
     /*The navbar has min-height 71px, the footer has min-height 70px.*/
     min-height: calc(100vh - 71px - 70px);
 
-    background-image: url("../../img/study.png");
+    background-image: url("../../img/study.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

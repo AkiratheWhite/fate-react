@@ -1,5 +1,5 @@
 import './styles.css';
-import bb from "../../img/bb_wince.png";
+import bb from "../../img/bb_wince.webp";
 
 const Page404 = () => {
     return (

@@ -1,4 +1,4 @@
-import waver from '../../img/waver_grin.png';
+import waver from '../../img/waver_grin.webp';
 import './styles.css';
 
 /*** VERY IMPORTANT

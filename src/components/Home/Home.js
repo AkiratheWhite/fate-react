@@ -2,10 +2,10 @@ import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import './styles.css';
 
-import emiya from '../../img/emiya.png';
-import mhxa from '../../img/mhxa.png';
+import emiya from '../../img/emiya.webp';
+import mhxa from '../../img/mhxa.webp';
 import entity from '../../img/entity.png';
-import waver from '../../img/waver.png';
+import waver from '../../img/waver.webp';
 
 import AddEvents from './AddEvents'
 import Greeting from './Greeting';

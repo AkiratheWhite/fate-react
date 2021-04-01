@@ -1,5 +1,5 @@
 import './styles.css';
-import jeanne from '../../img/jeanne_smile.png'
+import jeanne from '../../img/jeanne_smile.webp'
 
 const About = () => {
     return (

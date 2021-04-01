@@ -11,7 +11,7 @@
     
     min-height: calc(100vh - 71px - 70px);
 
-    background-image: url("../../img/hall.png");
+    background-image: url("../../img/hall.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -2,9 +2,9 @@ import {useDispatch} from 'react-redux';
 import {seen} from '../../redux/greetings';
 import $ from 'jquery';
 
-import mash_smile from '../../img/mash_smile.png';
-import mash_happy from '../../img/mash_happy.png';
-import mash_blush from "../../img/mash_blush.png";
+import mash_smile from '../../img/mash_smile.webp';
+import mash_happy from '../../img/mash_happy.webp';
+import mash_blush from "../../img/mash_blush.webp";
 
 const greetingKey = [
     {
